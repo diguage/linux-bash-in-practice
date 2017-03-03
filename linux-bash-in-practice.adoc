@@ -1,0 +1,54 @@
+= Linux Bash 编程实践
+D瓜哥 <http://www.diguage.com/>
+v0.0.1, 2017-2-20
+:doctype: book
+:icons: font
+:source-highlighter: coderay
+:docinfo:
+:toc: left
+:toc-title: 目录
+:toclevels: 4
+:sectnumlevels: 4
+:preface-title: 前言
+:chapter-label: 章
+:appendix-caption: 附录
+:listing-caption: 代码
+:figure-caption: 图
+:version-label: V
+:pdf-page-size: A4
+:keywords: Linux,Bash,编程
+:description: MySQL 学习笔记。从数据库表结构设计，深入到索引的数据结构，最后以前面的知识做铺垫，讲解如何使用 explain 做 SQL 的查询优化。
+:last-update-label: 最后更新时间
+:homepage: http://www.diguage.com/
+:sourcedir: ./src/
+
+== 参数处理
+
+=== 手动处理
+
+[source,bash]
+----
+include::{sourcedir}param-manual.sh[]
+----
+
+=== 使用 `getopts` 处理
+
+[source,bash]
+----
+include::{sourcedir}param-getopts.sh[]
+----
+
+=== 使用 `getopt` 处理
+
+[source,bash]
+----
+include::{sourcedir}param-getopt.sh[]
+----
+
+== 参考资料
+
+* http://c.biancheng.net/cpp/view/2739.html[Shell特殊变量：Shell $0, $#, $*, $@, $?, $$和命令行参数_Shell中文网]
+* https://my.oschina.net/leejun2005/blog/202376[bash/shell 解析命令行参数工具：getopts/getopt - leejun2005的个人页面]
+* http://www.cnblogs.com/FrankTan/archive/2010/03/01/1634516.html[Bash Shell中命令行选项/参数处理 - Frank Tan - 博客园]
+* https://www.cyberciti.biz/faq/bash-loop-over-file/[Bash Shell Loop Over Set of Files]
+* http://www.cnblogs.com/kaituorensheng/archive/2012/12/19/2825376.html[shell编程--遍历目录下的文件 - jihite - 博客园]
