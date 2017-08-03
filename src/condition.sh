@@ -1,6 +1,7 @@
 #!/bin/bash
 # 条件判断
 # http://www.cnblogs.com/emanlee/p/3583769.html[shell bash判断文件或文件夹是否存在]
+# http://stackoverflow.com/questions/24694384/check-if-a-condition-is-false[linux - Check if a condition is false - Stack Overflow]
 
 #shell判断文件夹是否存在
 
@@ -48,4 +49,24 @@ if [ "$var1" = "$var2" ]; then
   echo '$var1 eq $var2'
 else
   echo '$var1 not eq $var2'
+fi
+
+if [ 0 -eq 2 ]; then
+  echo true;
+else
+  echo false;
+fi
+
+if [ 0 -ne 2 ]; then
+  echo true;
+else
+  echo false;
+fi
+
+# 字符串使用 = ，数字使用 -eq 等
+
+if (( $i == 0 )); then
+  echo "i is 0"
+else
+  echo "i is unequal 0"
 fi

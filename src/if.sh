@@ -1,6 +1,10 @@
 #!/bin/bash
 # 条件判断
 # http://www.cnblogs.com/emanlee/p/3583769.html[shell bash判断文件或文件夹是否存在]
+# http://tldp.org/LDP/abs/html/fto.html[File test operators]
+#
+# http://blog.csdn.net/ithomer/article/details/6836382[Linux 之 shell 比较运算符 - IT-Homer - 博客频道 - CSDN.NET]
+# http://www.cnblogs.com/emanlee/p/3583769.html[shell bash判断文件或文件夹是否存在 - emanlee - 博客园]
 
 #shell判断文件夹是否存在
 
@@ -58,4 +62,4 @@ else
   echo "Sorry, $YES_OR_NO not recognized. Enter yes or no."
   exit 1
 fi
-exit 0 
+exit 0
