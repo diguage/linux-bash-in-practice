@@ -10,7 +10,12 @@ fSum 3 2;
 
 function fSum()
 {
-    echo $1,$2;
+    echo paramsArray, $*
+    for p in $*
+    do
+        echo "p= $p"
+    done
+    echo params, $1,$2;
     return $(($1+$2));
 }
 
@@ -19,7 +24,7 @@ fSum 5 7;
 total=$(fSum 3 2);
 
 # 返回值从 $? 获取
-echo $total,$?;
+echo "total = $total, params = $?";
 
 # 测试是否支持递归
 function testRecursive() {
@@ -32,6 +37,7 @@ function testRecursive() {
   fi
 }
 
+echo "test recursive…"
 testRecursive 3
 
 # http://www.cnblogs.com/chengmo/archive/2010/10/17/1853356.html[linux shell 自定义函数(定义、返回值、变量作用域）介绍 - 程默 - 博客园]

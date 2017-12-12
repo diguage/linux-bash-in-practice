@@ -28,3 +28,5 @@ echo "==============="
 echo $doc2
 echo "---------------"
 echo "$doc2"
+
+echo "$doc1" | tee -a test-heredoc.log

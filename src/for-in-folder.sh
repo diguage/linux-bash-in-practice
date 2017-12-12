@@ -5,6 +5,12 @@ do
   echo $f
 done
 
+for  f in `ls ./*\).mp3`
+do
+  echo "$f"
+done
+
+
 #!bin/sh
 for file in ./*
 do
@@ -27,4 +33,10 @@ do
     else
         echo $file 是目录
     fi
+done
+
+#!bin/sh
+for file in ./*\).mp3
+do
+  echo $file
 done
