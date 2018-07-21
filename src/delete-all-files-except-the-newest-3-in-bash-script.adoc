@@ -1,0 +1,31 @@
+= Delete all files except the newest 3 in bash script
+
+This will list all files except the newest three:
+
+[source,bash]
+----
+ls -t | tail -n +4
+----
+
+This will delete those files:
+
+[source,bash]
+----
+ls -t | tail -n +4 | xargs rm --
+----
+
+This will also list dotfiles:
+
+[source,bash]
+----
+ls -At | tail -n +4
+----
+
+and delete with dotfiles:
+
+[source,bash]
+----
+ls -At | tail -n +4 | xargs rm --
+----
+
+https://stackoverflow.com/a/26765276/951836[Delete all files except the newest 3 in bash script]
