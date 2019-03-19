@@ -22,6 +22,69 @@ v0.0.1, 2017-2-20
 :homepage: http://www.diguage.com/
 :sourcedir: ./src/
 
+== 
+
+// https://stackoverflow.com/a/1583282/951836
+find /home/www -type f -print0 | xargs -0 sed -i 's/subdomainA\.example\.com/subdomainB.example.com/g'
+
+// https://stackoverflow.com/a/22385837/951836
+grep -rl oldtext . | xargs sed -i 's/oldtext/newtext/g'
+
+
+== 问题
+
+. 为什么双引号可以多层嵌套？
+. 为什么函数的 `exit` 没有正确退出整个脚本？
+
+== 非贪婪匹配
+
+https://code.i-harness.com/zh-CN/q/10d52d[regex - 非贪婪（不情愿）正则表达式在sed中匹配？ - CODE Q&A Solved]
+
+
+
+== Get Http Status Code and body
+
+https://superuser.com/questions/1320674/get-response-body-and-show-http-code-by-curl/1321274#1321274[bash - Get response body and show HTTP code by curl - Super User]
+
+curl -s -w "\n%{http_code}" 'https://swapi.co/api/people/1/?format=json' | {
+    read body
+    read code
+    echo $code
+    jq .name <<< "$body"
+}
+
+
+== Heredoc and Variable
+
+https://stackoverflow.com/questions/23929235/multi-line-string-with-extra-space-preserved-indentation/23930212#23930212[bash - Multi-line string with extra space (preserved indentation) - Stack Overflow]
+
+read -r -d '' VAR << EOM
+This is line 1.
+This is line 2.
+Line 3.
+EOM
+
+
+
+== Import Bash Script
+
+https://stackoverflow.com/questions/10823635/how-to-include-file-in-a-bash-shell-script/10823650#10823650[linux - How to include file in a bash shell script - Stack Overflow]
+
+source FILE
+
+  可以定义一个 `import` 函数，来加载类库。
+
+== Print All Arauments
+
+https://linuxconfig.org/how-do-i-print-all-arguments-submitted-on-a-command-line-from-a-bash-script[How do I print all arguments submitted on a command line from a bash script? - LinuxConfig.org]
+
+[source,bash]
+----
+#!/bin/bash 
+
+echo $@
+----
+
 == 参数处理
 
 === 手动处理

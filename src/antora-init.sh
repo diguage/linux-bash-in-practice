@@ -17,6 +17,13 @@ touch modules/ROOT/examples/.gitkeep
 
 mkdir -p modules/ROOT/pages
 touch modules/ROOT/pages/index.adoc
+cat >./modules/ROOT/pages/index.adoc <<EOL
+++++
+<script type="text/javascript">
+  window.location.replace("./<TODO>.html");
+</script>
+++++%
+EOL
 
 touch modules/ROOT/nav.adoc
 echo "* xref:index.adoc[Home]" >> modules/ROOT/nav.adoc
