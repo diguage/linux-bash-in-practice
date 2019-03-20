@@ -1,3 +1,8 @@
+#!/usr/bin/env bash
+#
+# Convert AsciiDoc to GitHub Format Markdown
+#
+
 #  Adapted from https://tinyapps.org/blog/nix/201701240700_convert_asciidoc_to_markdown.html
 # Using asciidoctor 1.5.6.1 and pandoc 2.0.0.1
 # Install pandoc and asciidoctor
