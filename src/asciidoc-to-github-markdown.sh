@@ -14,6 +14,7 @@
 # Convert asciidoc to docbook using asciidoctor
 
 docbookFile=docbookFile.xml
+
 resultFile=result.md
 
 rm -rf $resultFile

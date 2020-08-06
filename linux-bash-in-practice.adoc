@@ -3,7 +3,9 @@ D瓜哥 <http://www.diguage.com/>
 v0.0.1, 2017-2-20
 :doctype: book
 :icons: font
-:source-highlighter: coderay
+:source-highlighter: rouge
+:rouge-style: monokai
+:rouge-linenums-mode: table
 :docinfo:
 :toc: left
 :toc-title: 目录
@@ -107,6 +109,21 @@ include::{sourcedir}param-getopts.sh[]
 ----
 include::{sourcedir}param-getopt.sh[]
 ----
+
+== 使用 `sed` 跨行替换
+
+[source,bash]
+----
+sed -i -f source.sed xxx.adoc
+----
+
+.`source.sed`
+[source,bash]
+----
+include::{sourcedir}source.sed[]
+----
+
+https://github.com/spring-projects/spring-framework/pull/25545[Merge source and substitution configuration in reference docs by diguage · Pull Request #25545 · spring-projects/spring-framework^]
 
 == 参考资料
 

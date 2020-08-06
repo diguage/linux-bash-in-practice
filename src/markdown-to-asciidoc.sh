@@ -2,6 +2,19 @@
 #
 # Convert Markdown to AsciiDoc
 #
-pandoc --standalone --columns=80 --atx-headers --to=asciidoc --output=asciidoc-result.adoc $1
 
-echo "convert $1 to asciidoc-result.adoc"
+#  https://matthewsetter.com/convert-markdown-to-asciidoc-withpandoc/
+
+fullname=$(basename -- "$1")
+filename="${fullname%.*}"
+ascname="${filename}.adoc"
+
+touch $ascname
+
+pandoc --atx-headers \
+    --verbose \
+    --wrap=none \
+    --toc \
+    --reference-links \
+    -f markdown+smart -t asciidoc $ascname \
+    $1
