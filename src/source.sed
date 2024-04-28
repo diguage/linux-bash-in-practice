@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+#
 # https://blog.csdn.net/solzy/article/details/21983271
 
 :begin

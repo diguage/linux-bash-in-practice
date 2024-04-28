@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#
 # heredoc 声明
 # http://tldp.org/LDP/abs/html/here-docs.html[Here Documents]
 

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+#
 str="Hello World"
 str2=" "
 str3=""

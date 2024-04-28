@@ -1,6 +1,13 @@
-#!/bin/bash
+#!/usr/bin/env bash
+#
 
 for  f in `ls .`
+do
+  echo $f
+done
+
+# 只扫描目录
+for  f in `ls -d */`
 do
   echo $f
 done

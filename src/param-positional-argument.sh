@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # ./param-positional-argument.sh apple banana cantaloupe dates
 
