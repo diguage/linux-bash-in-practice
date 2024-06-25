@@ -22,7 +22,13 @@ echo $SOURCE
 BASEDIR=$(dirname "$0")
 echo "$BASEDIR"
 
-filename=$(basename -- "$SOURCE")
-extension="${filename##*.}"
-filename="${filename%.*}"
-echo $extension, $filename
+# https://stackoverflow.com/a/965072
+fileBaseName=$(basename -- "$SOURCE")
+# 扩展名
+extension="${fileBaseName##*.}"
+# 文件名（不含扩展名）
+fileName="${fileBaseName%.*}"
+# https://unix.stackexchange.com/a/39545
+# 个别情况有问题
+parent=$(dirname $file)
+echo "parent=${parent}, fileBaseName=${fileBaseName}, fileName=${fileName}, extension=${extension}"
