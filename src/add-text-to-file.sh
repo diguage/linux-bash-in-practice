@@ -8,7 +8,9 @@ do
   filename=$(basename -- "$file")
   # 文件名即锚点值
   filename="${filename%.*}"
+  # https://stackoverflow.com/a/57158235
   if ! grep -q $filename "$file"; then
+    # https://unix.stackexchange.com/a/99351
     gsed -i "1 i\[#${filename}]" $file
   fi
 done
