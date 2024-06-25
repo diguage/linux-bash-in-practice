@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# WebP to PNG
+# PNG to JPG
 #
 
 basedir=`pwd`
